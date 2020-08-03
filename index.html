@@ -11,21 +11,21 @@
     <section class="hero">
       <p>Bonjour <span id="firstname"></span></p>
       <h1>_Bijour Banque <span>💶</span></h1>
-      <h2 id="total"></h2>
+      <h2 id="solde">+ 421.01 €</h2>
     </section>
     <section>
       <div class="row">
         <div class="column credit">
-          crédit : <span class="txt-color-white" id="totalCredit"></span>
+          crédit : <span class="txt-color-white" id="totalCredit">1520 €</span>
         </div>
         <div class="column debit">
-          débit : <span class="txt-color-white" id="totalDebit"></span>
+          débit : <span class="txt-color-white" id="totalDebit">1098.99 €</span>
           <span class="percent txt-color-white" id="totalDebitPercent"
             >72.29%</span
           >
         </div>
       </div>
-      <form action="#" id="">
+      <form action="click" id="">
         <select name="operation" id="operation">
           <option valeur="credit">+</option>
           <option valeur="debit">-</option>
@@ -42,7 +42,7 @@
           id="montant"
           placeholder="montant"
         />
-        <button type="submit">🥊</button>
+        <button type="submit" onclick="calcul()" >🥊</button>
       </form>
     </section>
     <div class="wrapper">

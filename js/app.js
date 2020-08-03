@@ -54,3 +54,4 @@ function calcul() {
 }
 // on execute la function
 calcul();
+

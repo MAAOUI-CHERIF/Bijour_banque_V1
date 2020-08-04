@@ -1,57 +1,32 @@
-import { user } from "./user.js";
+let totalCredit=0;
+let totalDebit=0;
+let percentDebit1=0;
+let percentDebit2=0;
 
-console.dir(user);
-
-console.log(
-  `hello ${user.firstname}, i know your password :-) ${user.password}`
-);
-
-document.querySelector("#firstname").textContent = user.firstname;
-
-// on déclare nos variables
-let totalCredit = 0;
-let totalDebit = 0;
-let solde = 0;
-let devise = "€";
-
-// on stocke toutes les opérations de compte dans un array[]
-const operationsCompte = [
-  ["+", "salaire", 1520],
-  ["-", "achat PS4", 499.99],
-  ["-", "achat TV", 599],
+let tabCredit=[
+    "salaire",
+    1520
 ];
 
-function calcul() {
-  let operator = "";
-  //doc forEach https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach
-  operationsCompte.forEach(function (data) {
-    console.log(data[0]);
-    if (data[0] === "+") {
-      totalCredit += data[2];
-    } else {
-      totalDebit += data[2];
-    }
-    solde = totalCredit - totalDebit;
-  });
+let tabDebit1 = [
+    "achat PS4",
+    499.99,
+    percentDebit1
+];
 
-  console.log("totalCredit", totalCredit);
-  console.log("totalDebit", totalDebit);
-  console.log("solde", solde);
+let tabDebit2 = [
+    "achat TV",
+    599,
+    percentDebit2
+];
 
-  if (solde >= 0) {
-    operator = "+";
-  } else {
-    document.getElementById("total").style.color = "red"; // on affiche le solde en couleur rouge
-  }
-  // on affiche les résultats sur le DOM
-  document.getElementById(
-    "total"
-  ).textContent = `${operator} ${solde} ${devise}`;
-  document.getElementById(
-    "totalCredit"
-  ).textContent = `${totalCredit} ${devise}`;
-  document.getElementById("totalDebit").textContent = `${totalDebit} ${devise}`;
-}
-// on execute la function
-calcul();
+let arrayCredit = [
+    tabCredit,
+];
 
+let arrayDebit = [
+    tabDebit1,
+    tabDebit2
+];
+
+console.log(arrayDebit);

@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banque Manager</title>
-    <link rel="stylesheet" href="./css/app.css" id="colorTheme" />
-    <script type="module" src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/app.css" id="colorTheme" />    
   </head>
   <body>
     <section class="hero">
@@ -25,10 +24,10 @@
           >
         </div>
       </div>
-      <form action="click" id="">
+      <form action="click" id="calculsolde()">
         <select name="operation" id="operation">
-          <option valeur="credit">+</option>
-          <option valeur="debit">-</option>
+          <option valeur="credit" id="plus" >+</option>
+          <option valeur="debit" id="moins">-</option>
         </select>
         <input
           type="text"
@@ -42,7 +41,7 @@
           id="montant"
           placeholder="montant"
         />
-        <button type="submit" onclick="calcul()" >🥊</button>
+        <button id="btpunch" type="button" >🥊</button>
       </form>
     </section>
     <div class="wrapper">
@@ -72,6 +71,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> 
+    <script type="module" src="./js/app.js" defer></script>   
   </body>
 </html>

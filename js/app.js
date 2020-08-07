@@ -56,18 +56,31 @@ function calcul() {
     console.log(solde);
 
     if(solde> 0){
-        solde.innerHTML = `+ ${solde} ${devise}`;
+        document.getElementById("solde").innerHTML = `+ ${solde} ${devise}`;
     }else{
         document.getElementById("solde").style.color = "red";
-        solde.innerHTML = `${solde} ${devise}`;        
-    }
+        document.getElementById("solde").innerHTML = `${solde} ${devise}`;        
+    }  
     
-    
-    solde.value=`${solde} ${devise}`;
     document.getElementById("totalCredit").textContent = `${totalCredit} ${devise}`;
-    document.getElementById("totalDebit").textContent = `${totalDebit} ${devise}`;      
+    document.getElementById("totalDebit").textContent = `${totalDebit} ${devise}`;
+
+    let addLiContent = document.createElement('li');            
+    if(operation==="+"){        
+        addLiContent.innerHTML = 
+            `
+                <span class="intitule">`${intitule}`</span>
+                <span class="montant txt-color-gazoil">`${montant}`</span>  
+            `
+            creditContent.appendChild(addLiContent);
+    }else{
+        addLiContent.innerHTML = 
+        `
+              <span class="intitule">`${intitule}`</span>
+              <span class="montant txt-color-red">`${montant}`</span>
+              <span class="percent txt-color-red"> % </span>
+        `
+        debitContent.appendChild(addLiContent);
+    }     
 }
 calcul();
-
- 
- 
